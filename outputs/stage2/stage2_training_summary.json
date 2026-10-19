@@ -1,0 +1,300 @@
+[
+  {
+    "best_val_dice": 0.8465755731228758,
+    "best_val_iou": 0.7598708199805454,
+    "best_epoch": 39,
+    "epochs_run": 49,
+    "tag": "M1_seed42",
+    "model_key": "M1",
+    "seed": 42
+  },
+  {
+    "best_val_dice": 0.8419790848265114,
+    "best_val_iou": 0.751430181842369,
+    "best_epoch": 35,
+    "epochs_run": 45,
+    "tag": "G1_seed42",
+    "model_key": "G1",
+    "seed": 42
+  },
+  {
+    "tag": "G1R_seed42",
+    "best_val_dice": 0.8354157133277573,
+    "best_val_iou": 0.7442150417156066,
+    "best_epoch": 31,
+    "epochs_run": 41,
+    "duration_min": 29.35,
+    "model_key": "G1R",
+    "seed": 42
+  },
+  {
+    "tag": "M1W_seed42",
+    "best_val_dice": 0.8563722296822334,
+    "best_val_iou": 0.7691701467117957,
+    "best_epoch": 39,
+    "epochs_run": 49,
+    "duration_min": 45.38,
+    "model_key": "M1W",
+    "seed": 42
+  },
+  {
+    "tag": "G1_ImageNet_seed42",
+    "best_val_dice": 0.8397967842677012,
+    "best_val_iou": 0.7537540407027994,
+    "best_epoch": 47,
+    "epochs_run": 50,
+    "duration_min": 35.19,
+    "model_key": "G1_ImageNet",
+    "seed": 42
+  },
+  {
+    "tag": "UNetPlusPlus_seed42",
+    "best_val_dice": 0.8478710588540873,
+    "best_val_iou": 0.7670653167825889,
+    "best_epoch": 38,
+    "epochs_run": 48,
+    "duration_min": 1514.03,
+    "model_key": "UNetPlusPlus",
+    "seed": 42
+  },
+  {
+    "tag": "G2_seed42",
+    "best_val_dice": 0.8326990477615713,
+    "best_val_iou": 0.7488730876503101,
+    "best_epoch": 50,
+    "epochs_run": 50,
+    "duration_min": 42.75,
+    "model_key": "G2",
+    "seed": 42
+  },
+  {
+    "tag": "G4_seed42",
+    "best_val_dice": 0.8390148450063978,
+    "best_val_iou": 0.7530899134131809,
+    "best_epoch": 45,
+    "epochs_run": 50,
+    "duration_min": 38.43,
+    "model_key": "G4",
+    "seed": 42
+  },
+  {
+    "tag": "G1_early_seed42",
+    "best_val_dice": 0.850310362052998,
+    "best_val_iou": 0.7670826153588098,
+    "best_epoch": 44,
+    "epochs_run": 50,
+    "duration_min": 37.36,
+    "model_key": "G1_early",
+    "seed": 42
+  },
+  {
+    "tag": "G1_deep_seed42",
+    "best_val_dice": 0.8400082537840072,
+    "best_val_iou": 0.7576531011976329,
+    "best_epoch": 40,
+    "epochs_run": 50,
+    "duration_min": 36.58,
+    "model_key": "G1_deep",
+    "seed": 42
+  },
+  {
+    "tag": "M1_seed123",
+    "best_val_dice": 0.8333544159695986,
+    "best_val_iou": 0.7621358665552207,
+    "best_epoch": 42,
+    "epochs_run": 50,
+    "duration_min": 27.34,
+    "model_key": "M1",
+    "seed": 123
+  },
+  {
+    "tag": "G1_seed123",
+    "best_val_dice": 0.8359612068777043,
+    "best_val_iou": 0.76015862548111,
+    "best_epoch": 42,
+    "epochs_run": 50,
+    "duration_min": 35.98,
+    "model_key": "G1",
+    "seed": 123
+  },
+  {
+    "tag": "G1R_seed123",
+    "best_val_dice": 0.8436220560424423,
+    "best_val_iou": 0.7697418728539628,
+    "best_epoch": 50,
+    "epochs_run": 50,
+    "duration_min": 35.76,
+    "model_key": "G1R",
+    "seed": 123
+  },
+  {
+    "tag": "M1W_seed123",
+    "best_val_dice": 0.8507808862268016,
+    "best_val_iou": 0.7746770131966457,
+    "best_epoch": 39,
+    "epochs_run": 49,
+    "duration_min": 779.05,
+    "model_key": "M1W",
+    "seed": 123
+  },
+  {
+    "tag": "G1_ImageNet_seed123",
+    "best_val_dice": 0.8478160234820123,
+    "best_val_iou": 0.7774435806054669,
+    "best_epoch": 50,
+    "epochs_run": 50,
+    "duration_min": 130.39,
+    "model_key": "G1_ImageNet",
+    "seed": 123
+  },
+  {
+    "tag": "UNetPlusPlus_seed123",
+    "best_val_dice": 0.8063771585787908,
+    "best_val_iou": 0.7286803725873341,
+    "best_epoch": 23,
+    "epochs_run": 33,
+    "duration_min": 49.08,
+    "model_key": "UNetPlusPlus",
+    "seed": 123
+  },
+  {
+    "tag": "G2_seed123",
+    "best_val_dice": 0.8468389284374416,
+    "best_val_iou": 0.7782808889711934,
+    "best_epoch": 45,
+    "epochs_run": 50,
+    "duration_min": 40.33,
+    "model_key": "G2",
+    "seed": 123
+  },
+  {
+    "tag": "G4_seed123",
+    "best_val_dice": 0.8318345879311692,
+    "best_val_iou": 0.7594928256799482,
+    "best_epoch": 42,
+    "epochs_run": 50,
+    "duration_min": 39.46,
+    "model_key": "G4",
+    "seed": 123
+  },
+  {
+    "tag": "G1_early_seed123",
+    "best_val_dice": 0.8283930785949108,
+    "best_val_iou": 0.7562612628484453,
+    "best_epoch": 43,
+    "epochs_run": 50,
+    "duration_min": 96.75,
+    "model_key": "G1_early",
+    "seed": 123
+  },
+  {
+    "tag": "G1_deep_seed123",
+    "best_val_dice": 0.8393292869005714,
+    "best_val_iou": 0.7636777798493213,
+    "best_epoch": 48,
+    "epochs_run": 50,
+    "duration_min": 36.48,
+    "model_key": "G1_deep",
+    "seed": 123
+  },
+  {
+    "tag": "M1_seed2026",
+    "best_val_dice": 0.8508531176381626,
+    "best_val_iou": 0.7747633299967691,
+    "best_epoch": 26,
+    "epochs_run": 36,
+    "duration_min": 134.7,
+    "model_key": "M1",
+    "seed": 2026
+  },
+  {
+    "tag": "G1_seed2026",
+    "best_val_dice": 0.8419057979777697,
+    "best_val_iou": 0.76368119265651,
+    "best_epoch": 39,
+    "epochs_run": 49,
+    "duration_min": 35.32,
+    "model_key": "G1",
+    "seed": 2026
+  },
+  {
+    "tag": "G1R_seed2026",
+    "best_val_dice": 0.8373121524034179,
+    "best_val_iou": 0.7531504230810178,
+    "best_epoch": 28,
+    "epochs_run": 38,
+    "duration_min": 27.6,
+    "model_key": "G1R",
+    "seed": 2026
+  },
+  {
+    "tag": "M1W_seed2026",
+    "best_val_dice": 0.8534690120962469,
+    "best_val_iou": 0.7746461301034286,
+    "best_epoch": 42,
+    "epochs_run": 50,
+    "duration_min": 47.95,
+    "model_key": "M1W",
+    "seed": 2026
+  },
+  {
+    "tag": "G1_ImageNet_seed2026",
+    "best_val_dice": 0.8371849039159892,
+    "best_val_iou": 0.7555898794032835,
+    "best_epoch": 41,
+    "epochs_run": 50,
+    "duration_min": 36.42,
+    "model_key": "G1_ImageNet",
+    "seed": 2026
+  },
+  {
+    "tag": "UNetPlusPlus_seed2026",
+    "best_val_dice": 0.8472235032686471,
+    "best_val_iou": 0.77276559412108,
+    "best_epoch": 39,
+    "epochs_run": 49,
+    "duration_min": 74.41,
+    "model_key": "UNetPlusPlus",
+    "seed": 2026
+  },
+  {
+    "tag": "G2_seed2026",
+    "best_val_dice": 0.8414153759244543,
+    "best_val_iou": 0.7652317584598581,
+    "best_epoch": 49,
+    "epochs_run": 50,
+    "duration_min": 36.81,
+    "model_key": "G2",
+    "seed": 2026
+  },
+  {
+    "tag": "G4_seed2026",
+    "best_val_dice": 0.851152153144248,
+    "best_val_iou": 0.77619082302702,
+    "best_epoch": 46,
+    "epochs_run": 50,
+    "duration_min": 38.29,
+    "model_key": "G4",
+    "seed": 2026
+  },
+  {
+    "tag": "G1_early_seed2026",
+    "best_val_dice": 0.8519084418936633,
+    "best_val_iou": 0.7786017672227074,
+    "best_epoch": 47,
+    "epochs_run": 50,
+    "duration_min": 35.58,
+    "model_key": "G1_early",
+    "seed": 2026
+  },
+  {
+    "tag": "G1_deep_seed2026",
+    "best_val_dice": 0.8504718117046052,
+    "best_val_iou": 0.7726887121473638,
+    "best_epoch": 40,
+    "epochs_run": 50,
+    "duration_min": 35.18,
+    "model_key": "G1_deep",
+    "seed": 2026
+  }
+]

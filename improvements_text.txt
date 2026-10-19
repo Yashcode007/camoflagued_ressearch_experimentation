@@ -1,0 +1,131 @@
+Major problems and practical solutions
+
+1. All models were trained with only one random seed
+Problem:
+The models were trained only with seed 42. Their performance may partly depend on that particular random initialization.
+Practical solution:
+Repeat only the four most important models using two additional seeds:
+M1: basic U-Net 
+G1: camouflage-guided U-Net 
+G1R: random-teacher model 
+M1W: parameter-matched wide U-Net 
+Use three seeds in total, for example:
+42, 123, 2026
+There is no immediate need to repeat all eight models with five seeds. Running these four models with three seeds would provide reasonable evidence while keeping the computation manageable.
+
+2. There is no direct comparison between G1 and G1R
+Problem:
+The main argument is that the camouflage-trained teacher is better than the random teacher. However, the paper does not statistically compare these two models directly.
+Simple solution:
+Use the already saved per-image Dice scores to perform:
+G1 versus G1R; 
+G1 versus M1W; 
+G1 versus M1. 
+Use the paired Wilcoxon signed-rank test and report:
+average or median difference; 
+-value; 
+corrected -value; 
+win percentage; 
+95% confidence interval. 
+This experiment does not require any model retraining.
+
+3. The benefit may not be specific to camouflage knowledge
+Problem:
+The camouflage teacher performs better than a random teacher, but any properly pretrained model might perform better than a random model. Therefore, the current results do not establish that camouflage pretraining itself is special.
+Practical solution:
+Add one generic pretrained-teacher control:
+use the same teacher architecture; 
+initialize its encoder with ImageNet weights; 
+freeze the teacher; 
+use the same fusion method as G1. 
+This requires only one additional model configuration. If it is run with three seeds, it will provide a stronger comparison.
+Research question:
+Is a camouflage-trained teacher better than a generally pre-trained teacher?
+
+4. ISIC is extremely different from Kvasir
+Problem:
+The model is trained on colonoscopy polyps but tested on skin lesions. The image modality, anatomy, colour distribution and lesion appearance all change. Therefore, this experiment represents an extremely large shift, and all models perform poorly.
+Practical solution:
+Test the existing trained models on one or two public polyp datasets without retraining, for example:
+CVC-ClinicDB; 
+CVC-ColonDB; 
+ETIS-LaribPolypDB. 
+Because the models are already trained, only inference is required. This should be much faster than conducting new training runs.
+This produces two levels of testing:
+External polyp dataset: realistic domain generalization. 
+ISIC: extreme cross-anatomy transfer. 
+
+5. The camouflage teachers are relatively weak
+Problem:
+The two camouflage teachers have Dice scores of approximately 0.467 and almost identical performance. A reviewer may argue that unsuccessful transfer is caused by weak teachers.
+Practical solution:
+Using a completely new COD architecture could take considerable time. A simpler initial experiment would be:
+continue training the better existing teacher for more epochs; 
+select its best checkpoint using validation Dice; 
+use the improved checkpoint with the existing G1 architecture; 
+compare it with the original teacher. 
+This would answer:
+Does a stronger version of the same camouflage teacher transfer better?
+If no improvement occurs, a stronger published COD model can be considered later.
+
+
+6. The fusion method may use too many teacher features
+Problem:
+Teacher features are currently fused at all five levels. The visualization indicates that some deeper teacher features do not localize the lesion.
+Easy ablation experiment:
+Train only two additional versions:
+Early fusion: guidance at enc1 and enc2 only. 
+Deep fusion: guidance at enc3, enc4 and bottleneck only. 
+Compare them with the current all-level G1.
+This is simpler than designing an entirely new attention mechanism and can reveal where camouflage information is useful.
+
+7. Models may not have fully converged
+Problem:
+The training curves suggest that the models had not completely saturated at 30 epochs. In addition, G2 ran only 29 epochs due to a session limit.
+Practical solution:
+Extend the maximum training to 50 epochs. 
+Use the same early-stopping rule for all models. 
+Save the best validation checkpoint. 
+Repeat only the main four models first. 
+Restart the incomplete G2 run only if it remains important to the final paper. 
+Since early stopping is already implemented, models that converge early will not use all 50 epochs.
+
+8. Only basic segmentation architectures are used
+Problem:
+U-Net and Attention U-Net may be considered insufficient for comparison with recent methods.
+Low-effort solution:
+Add only one modern baseline instead of many. Suitable options include:
+DeepLabV3+; 
+U-Net++; 
+SegFormer-B0. 
+If implementation time is limited, DeepLabV3+ or U-Net++ would be simpler. Train it as a normal medical-segmentation model without camouflage guidance.
+The purpose is to show how the proposed guided models compare with a stronger standard architecture.
+
+9. G4 behaves inconsistently
+Problem:
+G4 is the best model on Kvasir but the worst model on ISIC. With only one run, it is unclear whether this is a real pattern or an unstable training result.
+Practical solution:
+Do not perform a large investigation immediately. Repeat only G4 with two additional seeds.
+If it remains strong in-domain and poor out-of-domain, this becomes an important result. If the result changes greatly, report G4 as unstable.
+
+10. Feature visualization is based mainly on one image
+Problem:
+One example can illustrate the behavior but cannot demonstrate that it occurs consistently.
+Low-cost solution:
+Select 10–20 Kvasir test images. 
+Generate the same feature visualization for G1 and G1R. 
+Calculate the average activation variance for each teacher level. 
+Calculate the cosine similarity between teacher and student features. 
+Present one figure and one small summary table. 
+
+11. The main claims are stronger than the evidence
+Problem:
+Expressions such as:
+“real transferable value”; 
+“the transfer is real”; 
+“domain-neutral regulariser” 
+sound like confirmed conclusions. Currently, they are interpretations based on one seed.
+Simple solution:
+Until the additional experiments are complete, use cautious language:
+The results suggest that camouflage-pretrained features may be less harmful under severe distribution shift than random frozen features.
+After multiple seeds and direct testing, stronger claims may be used if supported.

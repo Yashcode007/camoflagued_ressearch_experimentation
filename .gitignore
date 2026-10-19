@@ -1,0 +1,52 @@
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+*.venv/
+
+# Environment Variables & Credentials (Secrets)
+.env
+.env.local
+.env.*.local
+
+# Heavy Datasets (Gigabytes of raw images & masks)
+data/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Model Weights and Checkpoints (Gigabytes of binary checkpoints)
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.bin
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & Temporary Files
+*.log
+temp/
+tmp/

@@ -1,0 +1,23 @@
+# Camouflage-Aware Medical Image Segmentation Requirements
+# Note: For PyTorch with CUDA on Windows, install using:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+
+torch>=2.2.0
+torchvision>=0.17.0
+segmentation-models-pytorch>=0.3.3
+timm>=0.9.12
+albumentations>=1.4.0
+opencv-python>=4.8.0
+pillow>=10.0.0
+numpy>=1.24.0,<2.0.0
+scipy>=1.11.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+kaggle>=1.5.16
+scikit-learn>=1.3.0
+thop>=0.1.1
+tabulate>=0.9.0
+python-docx>=1.0.0
