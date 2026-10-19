@@ -50,3 +50,5 @@ desktop.ini
 *.log
 temp/
 tmp/
+git.cmd
+push_to_github.bat
